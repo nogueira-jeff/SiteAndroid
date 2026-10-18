@@ -1,4 +1,15 @@
 @charset "UTF-8";
+/*
+#c5ebd6
+#83e1ad
+#3ddc84
+#2fa866
+#1a5c37
+#063d1e
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 @font-face {
     font-family: 'Idroid';
     src: url('../fontes/idroid.otf') format('opentype');
@@ -6,26 +17,44 @@
     font-style: normal;
 }
 
-header {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    text-align: center;
-    color: white;
-    background-image: linear-gradient(to bottom, #1A5C38, #168f4a);
-    height: 220px;
-    padding: 1px;
-    margin: 0px;
+:root {
+    --cor0: #ebe5c5;
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', cursive;
+    --fonte-android: 'Idroid', cursive;
 }
 
-header > nav {
-    text-align: left;
+* {
     margin: 0px;
-    height: 100px;
+    padding: 0px;
+}
+
+header {
+    background-color: var(--cor4);
+}
+
+header > h1 {
+    color: white;
+    font-family: var(--fonte-destaque);
+}
+
+header > p {
+    color: white;
+}
+
+nav {
+    background-color: var(--cor5);
+    text-align: left;
 }
 
 nav > a {
     text-decoration: none;
-    margin: 0px;
-    padding: 6px;
     color: #16442b;
 }
 
@@ -34,24 +63,23 @@ nav > a:hover {
 }
 
 body {
-    background-color: #84E1AD;
-    margin: 0px;
+    font-family: var(--fonte-padrao);
+    background-color: var(--cor0);
 }
 
 main {
     font-family: Arial, Helvetica, sans-serif;
     background-color: white;
     text-align: justify;
-    padding: 5px;
 }
 
-h1.historia {
-    font-family: 'Idroid', Helvetica, sans-serif;
-    color: #42785B;
+main h1 {
+    font-family: var(--fonte-android);
+    color: var(--cor5)
 }
 
-h2 {
-    font-family: 'Idroid', Helvetica, sans-serif;
+main h2 {
+    font-family: var(--fonte-android);
     color: #42785B;
     background-image: linear-gradient(to right, #C4EAD5, white);
 }
@@ -76,21 +104,17 @@ article > p {
     background-color: #1A5C38;
     color: white;
     text-decoration: none;
-    padding: 2px;
 }
 
 
 footer {
-    background-color: #1A5C38;
+    background-color: var(--cor5);
     color: white;
     text-align: center;
     font-weight: normal;
-    padding: 0px;
-    margin: 0px;
 }
 
 footer > p {
-    margin: 0px;
 }
 
 span.rodape {
