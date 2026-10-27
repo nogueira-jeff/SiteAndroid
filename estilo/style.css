@@ -40,6 +40,10 @@ body {
     background-color: var(--cor0);
 }
 
+a.externo::after {
+    content: '\00A0\1F517';
+}
+
 header {
     background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
     /* degradê no cabeçalho - direção + de qual cor a qual cor*/
@@ -177,7 +181,7 @@ aside > h3 {
 }
 
 aside > ul {
-    list-style-type: '\2714\00A0\00A0';
+    list-style-type: '\2714\00A0\00A0'; /*00A0: código para espaço sem quebra / 2714 código do check */
     list-style-position: inside;
     columns: 2;
 }
